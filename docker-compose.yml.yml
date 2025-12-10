@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  zmq-server:
+    build: .
+    container_name: zmq-server
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
